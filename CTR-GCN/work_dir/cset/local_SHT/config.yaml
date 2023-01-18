@@ -1,16 +1,16 @@
-# command line: main.py --config work_dir/cset/local_SHTg/config.yaml --model model.local_SHTg.Model --work-dir work_dir/cset/local_SHTg --device 5 --phase train --start-epoch 49 --weights work_dir/cset/local_SHTg/runs-49-41699.pt
+# command line: main.py --config config/nturgbd120-cross-set/default.yaml --model model.local_SHT.Model --work-dir work_dir/cset/local_SHT --device 4 --phase train --start-epoch 49 --weights work_dir/cset/local_SHT/runs-49-41699.pt --warm_up_epoch 0
 
 base_lr: 0.1
 batch_size: 64
-config: work_dir/cset/local_SHTg/config.yaml
+config: config/nturgbd120-cross-set/default.yaml
 device:
-- 5
+- 4
 eval_interval: 5
 feeder: feeders.feeder_ntu.Feeder
 ignore_weights: []
 log_interval: 100
 lr_decay_rate: 0.1
-model: model.local_SHTg.Model
+model: model.local_SHT.Model
 model_args:
   graph: graph.ntu_rgb_d.Graph
   graph_args:
@@ -61,7 +61,7 @@ train_feeder_args:
   split: train
   vel: false
   window_size: 64
-warm_up_epoch: 5
+warm_up_epoch: 0
 weight_decay: 0.0004
-weights: work_dir/cset/local_SHTg/runs-49-41699.pt
-work_dir: work_dir/cset/local_SHTg
+weights: work_dir/cset/local_SHT/runs-49-41699.pt
+work_dir: work_dir/cset/local_SHT
