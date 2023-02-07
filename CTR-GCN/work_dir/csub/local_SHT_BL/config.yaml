@@ -1,16 +1,16 @@
-# command line: main.py --config config/nturgbd120-cross-subject/default.yaml --model model.local_SHTg_BL.Model --work-dir work_dir/ntu120/csub/local_SHTg_BL --device 5
+# command line: main.py --config config/nturgbd120-cross-subject/default.yaml --model model.local_SHT_BL.Model --work-dir work_dir/csub/local_SHT_BL --device 1
 
 base_lr: 0.1
 batch_size: 64
 config: config/nturgbd120-cross-subject/default.yaml
 device:
-- 5
+- 1
 eval_interval: 5
 feeder: feeders.feeder_ntu.Feeder
 ignore_weights: []
 log_interval: 100
 lr_decay_rate: 0.1
-model: model.local_SHTg_BL.Model
+model: model.local_SHT_BL.Model
 model_args:
   graph: graph.ntu_rgb_d.Graph
   graph_args:
@@ -64,4 +64,4 @@ train_feeder_args:
 warm_up_epoch: 5
 weight_decay: 0.0004
 weights: null
-work_dir: work_dir/ntu120/csub/local_SHTg_BL
+work_dir: work_dir/csub/local_SHT_BL
