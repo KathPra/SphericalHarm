@@ -1,10 +1,10 @@
-# command line: main.py --config config/nturgbd120-cross-subject/bonevel.yaml --model model.local_SHT.Model --work-dir work_dir/csub/local_SHT_bonevel --device 2 --phase train --start-epoch 20 --weights work_dir/csub/local_SHT_bonevel/runs-20-19680.pt --warm_up_epoch 0
+# command line: main.py --config config/nturgbd120-cross-subject/bonevel.yaml --model model.local_SHT.Model --work-dir work_dir/csub/local_SHT_bonevel --device 7
 
 base_lr: 0.1
 batch_size: 64
 config: config/nturgbd120-cross-subject/bonevel.yaml
 device:
-- 2
+- 7
 eval_interval: 5
 feeder: feeders.feeder_ntu.Feeder
 ignore_weights: []
@@ -32,7 +32,7 @@ seed: 1
 show_topk:
 - 1
 - 5
-start_epoch: 20
+start_epoch: 0
 step:
 - 35
 - 55
@@ -61,7 +61,7 @@ train_feeder_args:
   split: train
   vel: true
   window_size: 64
-warm_up_epoch: 0
+warm_up_epoch: 5
 weight_decay: 0.0004
-weights: work_dir/csub/local_SHT_bonevel/runs-20-19680.pt
+weights: null
 work_dir: work_dir/csub/local_SHT_bonevel
