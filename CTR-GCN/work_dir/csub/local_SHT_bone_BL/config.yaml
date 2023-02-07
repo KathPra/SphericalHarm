@@ -1,10 +1,10 @@
-# command line: main.py --config config/nturgbd120-cross-subject/bone.yaml --model model.local_SHT_BL.Model --work-dir work_dir/csub/local_SHT_bone_BL --device 4 --weights work_dir/csub/local_SHT_bone_BL/runs-61-40651.pt --phase test
+# command line: main.py --config config/nturgbd120-cross-subject/bone.yaml --model model.local_SHT_BL.Model --work-dir work_dir/csub/local_SHT_bone_BL --device 1
 
 base_lr: 0.1
 batch_size: 64
 config: config/nturgbd120-cross-subject/bone.yaml
 device:
-- 4
+- 1
 eval_interval: 5
 feeder: feeders.feeder_ntu.Feeder
 ignore_weights: []
@@ -23,7 +23,7 @@ nesterov: true
 num_epoch: 65
 num_worker: 32
 optimizer: SGD
-phase: test
+phase: train
 print_log: true
 save_epoch: 30
 save_interval: 1
@@ -63,5 +63,5 @@ train_feeder_args:
   window_size: 64
 warm_up_epoch: 5
 weight_decay: 0.0004
-weights: work_dir/csub/local_SHT_bone_BL/runs-61-40651.pt
+weights: null
 work_dir: work_dir/csub/local_SHT_bone_BL
