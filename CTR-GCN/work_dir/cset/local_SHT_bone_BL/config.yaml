@@ -1,16 +1,16 @@
-# command line: main.py --config config/nturgbd120-cross-set/bone.yaml --model model.local_SHTg_BL.Model --work-dir work_dir/cset/local_SHTg_bone_BL --device 6
+# command line: main.py --config config/nturgbd120-cross-set/bone.yaml --model model.local_SHT_BL.Model --work-dir work_dir/cset/local_SHT_bone_BL --device 3
 
 base_lr: 0.1
 batch_size: 64
 config: config/nturgbd120-cross-set/bone.yaml
 device:
-- 6
+- 3
 eval_interval: 5
 feeder: feeders.feeder_ntu.Feeder
 ignore_weights: []
 log_interval: 100
 lr_decay_rate: 0.1
-model: model.local_SHTg_BL.Model
+model: model.local_SHT_BL.Model
 model_args:
   graph: graph.ntu_rgb_d.Graph
   graph_args:
@@ -64,4 +64,4 @@ train_feeder_args:
 warm_up_epoch: 5
 weight_decay: 0.0004
 weights: null
-work_dir: work_dir/cset/local_SHTg_bone_BL
+work_dir: work_dir/cset/local_SHT_bone_BL
