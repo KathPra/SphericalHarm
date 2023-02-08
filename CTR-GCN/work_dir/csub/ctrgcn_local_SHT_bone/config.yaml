@@ -1,10 +1,10 @@
-# command line: main.py --config config/nturgbd120-cross-subject/bone.yaml --model model.ctrgcn_local_SHT.Model --work-dir work_dir/csub/ctrgcn_local_SHT_bone --device 0 --phase train --start-epoch 48 --weights work_dir/csub/ctrgcn_local_SHT_bone/runs-48-47232.pt --warm_up_epoch 0
+# command line: main.py --config config/nturgbd120-cross-subject/bone.yaml --model model.ctrgcn_local_SHT.Model --work-dir work_dir/csub/ctrgcn_local_SHT_bone --device 1
 
 base_lr: 0.1
 batch_size: 64
 config: config/nturgbd120-cross-subject/bone.yaml
 device:
-- 0
+- 1
 eval_interval: 5
 feeder: feeders.feeder_ntu.Feeder
 ignore_weights: []
@@ -32,7 +32,7 @@ seed: 1
 show_topk:
 - 1
 - 5
-start_epoch: 48
+start_epoch: 0
 step:
 - 35
 - 55
@@ -61,7 +61,7 @@ train_feeder_args:
   split: train
   vel: false
   window_size: 64
-warm_up_epoch: 0
+warm_up_epoch: 5
 weight_decay: 0.0004
-weights: work_dir/csub/ctrgcn_local_SHT_bone/runs-48-47232.pt
+weights: null
 work_dir: work_dir/csub/ctrgcn_local_SHT_bone

@@ -1,10 +1,10 @@
-# command line: main.py --config config/nturgbd120-cross-subject/default.yaml --model model.ctrgcn_local_SHT_BL.Model --work-dir work_dir/csub/ctrgcn_local_SHT_BL --device 7
+# command line: main.py --config config/nturgbd120-cross-subject/default.yaml --model model.ctrgcn_local_SHT_BL.Model --work-dir work_dir/csub/ctrgcn_local_SHT_BL --device 1 --warm_up_epoch 0 --start-epoch 44 --weights work_dir/csub/local_SHT_BL/runs-44-43296.pt
 
 base_lr: 0.1
 batch_size: 64
 config: config/nturgbd120-cross-subject/default.yaml
 device:
-- 7
+- 1
 eval_interval: 5
 feeder: feeders.feeder_ntu.Feeder
 ignore_weights: []
@@ -32,7 +32,7 @@ seed: 1
 show_topk:
 - 1
 - 5
-start_epoch: 0
+start_epoch: 44
 step:
 - 35
 - 55
@@ -61,7 +61,7 @@ train_feeder_args:
   split: train
   vel: false
   window_size: 64
-warm_up_epoch: 5
+warm_up_epoch: 0
 weight_decay: 0.0004
-weights: null
+weights: work_dir/csub/local_SHT_BL/runs-44-43296.pt
 work_dir: work_dir/csub/ctrgcn_local_SHT_BL
