@@ -1,4 +1,4 @@
-# command line: main.py --config config/nturgbd120-cross-set/bone.yaml --model model.ctrgcn_local_SHT_BL.Model --work-dir work_dir/cset/ctrgcn_local_SHT_bone_BL --device 7 --phase train --start-epoch 50 --weights work_dir/cset/ctrgcn_local_SHT_bone_BL/runs-50-42550.pt --warm_up_epoch 0
+# command line: main.py --config config/nturgbd120-cross-set/bone.yaml --model model.ctrgcn_local_SHT_BL.Model --work-dir work_dir/cset/ctrgcn_local_SHT_bone_BL --device 7
 
 base_lr: 0.1
 batch_size: 64
@@ -32,7 +32,7 @@ seed: 1
 show_topk:
 - 1
 - 5
-start_epoch: 50
+start_epoch: 0
 step:
 - 35
 - 55
@@ -61,7 +61,7 @@ train_feeder_args:
   split: train
   vel: false
   window_size: 64
-warm_up_epoch: 0
+warm_up_epoch: 5
 weight_decay: 0.0004
-weights: work_dir/cset/ctrgcn_local_SHT_bone_BL/runs-50-42550.pt
+weights: null
 work_dir: work_dir/cset/ctrgcn_local_SHT_bone_BL
