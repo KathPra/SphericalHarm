@@ -1,4 +1,4 @@
-# command line: main.py --config config/nturgbd120-cross-set/default.yaml --model model.ctrgcn_local_SHT_BL.Model --work-dir work_dir/cset/ctrgcn_local_SHT_BL --device 0
+# command line: main.py --config config/nturgbd120-cross-set/default.yaml --work-dir work_dir/cset/ctrgcn_local_SHT_BL --model model.ctrgcn_local_SHT_BL.Model
 
 base_lr: 0.1
 batch_size: 64
@@ -65,3 +65,4 @@ warm_up_epoch: 5
 weight_decay: 0.0004
 weights: null
 work_dir: work_dir/cset/ctrgcn_local_SHT_BL
+cal_SHT_BL
