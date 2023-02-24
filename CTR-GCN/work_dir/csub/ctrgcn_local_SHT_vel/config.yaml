@@ -1,10 +1,10 @@
-# command line: main.py --config config/nturgbd120-cross-subject/velocity.yaml --model model.ctrgcn_local_SHT.Model --work-dir work_dir/csub/ctrgcn_local_SHT_vel --device 2
+# command line: main.py --config config/nturgbd120-cross-subject/velocity.yaml --work-dir work_dir/csub/ctrgcn_local_SHT_vel --model model.ctrgcn_local_SHT.Model
 
 base_lr: 0.1
 batch_size: 64
 config: config/nturgbd120-cross-subject/velocity.yaml
 device:
-- 2
+- 0
 eval_interval: 5
 feeder: feeders.feeder_ntu.Feeder
 ignore_weights: []
@@ -65,3 +65,4 @@ warm_up_epoch: 5
 weight_decay: 0.0004
 weights: null
 work_dir: work_dir/csub/ctrgcn_local_SHT_vel
+al_SHT_vel
