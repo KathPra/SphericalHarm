@@ -1,10 +1,10 @@
-# command line: main.py --config config/nturgbd120-cross-set/bonevel.yaml --model model.ctrgcn_local_SHT_BL.Model --work-dir work_dir/cset/ctrgcn_local_SHT_bonevel_BL --device 6
+# command line: main.py --config config/nturgbd120-cross-set/bonevel.yaml --work-dir work_dir/cset/ctrgcn_local_SHT_bonevel_BL --model model.ctrgcn_local_SHT_BL.Model
 
 base_lr: 0.1
 batch_size: 64
 config: config/nturgbd120-cross-set/bonevel.yaml
 device:
-- 6
+- 0
 eval_interval: 5
 feeder: feeders.feeder_ntu.Feeder
 ignore_weights: []
@@ -65,3 +65,4 @@ warm_up_epoch: 5
 weight_decay: 0.0004
 weights: null
 work_dir: work_dir/cset/ctrgcn_local_SHT_bonevel_BL
+bonevel_BL
