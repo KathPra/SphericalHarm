@@ -1,10 +1,10 @@
-# command line: main.py --config config/nturgbd120-cross-set/default.yaml --model model.ctrgcn_local_SHT.Model --work-dir work_dir/cset/ctrgcn_local_SHT --device 4 --phase train --start-epoch 18 --weights work_dir/cset/ctrgcn_local_SHT/runs-18-15318.pt --warm_up_epoch 0
+# command line: main.py --config config/nturgbd120-cross-set/default.yaml --work-dir work_dir/cset/ctrgcn_local_SHT --model model.ctrgcn_local_SHT.Model --warm_up_epoch 0 --start-epoch 36 --weights work_dir/cset/ctrgcn_local_SHT/runs-36-30636.pt
 
 base_lr: 0.1
 batch_size: 64
 config: config/nturgbd120-cross-set/default.yaml
 device:
-- 4
+- 0
 eval_interval: 5
 feeder: feeders.feeder_ntu.Feeder
 ignore_weights: []
@@ -32,7 +32,7 @@ seed: 1
 show_topk:
 - 1
 - 5
-start_epoch: 18
+start_epoch: 36
 step:
 - 35
 - 55
@@ -63,5 +63,6 @@ train_feeder_args:
   window_size: 64
 warm_up_epoch: 0
 weight_decay: 0.0004
-weights: work_dir/cset/ctrgcn_local_SHT/runs-18-15318.pt
+weights: work_dir/cset/ctrgcn_local_SHT/runs-36-30636.pt
 work_dir: work_dir/cset/ctrgcn_local_SHT
+ir/cset/ctrgcn_local_SHT
